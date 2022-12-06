@@ -1,5 +1,5 @@
-import { request } from '../../helpers';
+import { request, Paginationable } from '../../helpers';
 
-export const getMostRecent = (take: number, skip: number) => {
+export const getMostRecent = ({ take, skip }: Paginationable) => {
   return request(`/quotes/most-recent?take=${take}&skip=${skip}`);
 };

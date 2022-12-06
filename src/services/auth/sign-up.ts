@@ -1,11 +1,11 @@
-import { request } from '../../helpers';
+import { request, CreateUserDto } from '../../helpers';
 
-export const signUp = (
-  email: string,
-  firstName: string,
-  lastName: string,
-  password: string
-) => {
+export const signUp = ({
+  email,
+  firstName,
+  lastName,
+  password,
+}: CreateUserDto) => {
   return request('/signup', {
     method: 'POST',
     body: JSON.stringify({

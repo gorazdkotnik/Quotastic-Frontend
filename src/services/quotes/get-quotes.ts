@@ -1,5 +1,5 @@
-import { request } from '../../helpers';
+import { request, Paginationable } from '../../helpers';
 
-export const getQuotes = (take: number, skip: number) => {
+export const getQuotes = ({ take, skip }: Paginationable) => {
   return request(`/quotes?take=${take}&skip=${skip}`);
 };
